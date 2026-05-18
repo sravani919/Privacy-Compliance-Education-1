@@ -5,58 +5,39 @@ import { Bell, BookOpen, Zap, Users, Globe, ArrowRight, Calendar } from "lucide-
 
 export default function HomePage() {
   const projectNews = [
-    {
-      id: 1,
-      date: "January 2026",
-      title: "Project Updates Coming Soon",
-      description: "Placeholder for next cycle of activities and news.",
-      type: "milestone",
-    },
-    {
-      id: 2,
-      date: "December 2025",
-      title: "Year-End Review Placeholder",
-      description: "Updates on project milestones will be added after the upcoming review meeting.",
-      type: "launch",
-    },
-    {
-      id: 3,
-      date: "November 2025",
-      title: "Mid-Year Progress Placeholder",
-      description:
-        "Ongoing work summaries and collaboration highlights will be added after the next project checkpoint.",
-      type: "progress",
-    },
-  ]
-
+  {
+    id: 1,
+    date: "April 2026",
+    title: "Privacy Policy Analysis Presentation",
+    description:
+      "A presentation was conducted explaining why privacy policy analysis is important and how organizations must evaluate compliance with privacy regulations.",
+    type: "presentation",
+  },
+  {
+    id: 2,
+    date: "April 2026",
+    title: "Hands-on Lab Session",
+    description:
+      "Students participated in interactive hands-on labs using Google Colab to follow along step by step.",
+    type: "lab",
+  },
+]
   const highlights = [
-    {
-      title: "Privacy Compliance Curriculum",
-      description: "Overview and learning modules will be added soon as the curriculum development progresses.",
-      icon: BookOpen,
-      href: "/curriculum",
-    },
-    {
-      title: "Hands-on Labs",
-      description:
-        "Interactive lab exercises and resources are under preparation and will be available in upcoming updates.",
-      icon: Zap,
-      href: "/labs",
-    },
-    {
-      title: "PRICOMP Research Platform",
-      description: "Information about the platform and its research capabilities will be shared here soon.",
-      icon: Globe,
-      href: "/pricomp-platform",
-    },
-    {
-      title: "Broader Participation",
-      description:
-        "Details about outreach activities, student engagement, and workshops will be added as plans finalize.",
-      icon: Users,
-      href: "/broader-impacts",
-    },
-  ]
+  {
+    title: "Privacy Policy Analysis",
+    description:
+      "Presentation on why privacy policy analysis is needed and why organizations must evaluate privacy compliance regularly.",
+    icon: BookOpen,
+    href: "/curriculum",
+  },
+  {
+    title: "Hands-on Labs",
+    description:
+      "Students completed guided hands-on lab exercises using Google Colab during the session.",
+    icon: Zap,
+    href: "/labs",
+  },
+]
 
   return (
     <div className="min-h-screen">
@@ -68,8 +49,8 @@ export default function HomePage() {
               Privacy Compliance Education and Research
             </h1>
             <p className="text-lg text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              NSF SaTC:EDU PRICOMP project develops a comprehensive curriculum, hands-on labs, and an integrative
-              research platform to engage students in privacy compliance education.
+                  The PRICOMP project included a presentation on privacy policy analysis and guided hands-on lab activities for students.
+                </p>
             </p>
             <div className="text-sm text-blue-100 mb-8">
               <div className="font-semibold mb-3">Partner Institutions:</div>
