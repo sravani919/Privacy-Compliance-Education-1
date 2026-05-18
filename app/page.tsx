@@ -50,7 +50,7 @@ export default function HomePage() {
             </h1>
             <p className="text-lg text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
                   The PRICOMP project included a presentation on privacy policy analysis and guided hands-on lab activities for students.
-                </p>
+                
             </p>
             <div className="text-sm text-blue-100 mb-8">
               <div className="font-semibold mb-3">Partner Institutions:</div>
