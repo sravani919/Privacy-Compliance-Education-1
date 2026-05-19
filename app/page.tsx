@@ -1,43 +1,71 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { Bell, BookOpen, Zap, Users, Globe, ArrowRight, Calendar } from "lucide-react"
+import { Bell, BookOpen, Zap, ArrowRight, Calendar, Download } from "lucide-react"
 
 export default function HomePage() {
   const projectNews = [
-  {
-    id: 1,
-    date: "April 2026",
-    title: "Privacy Policy Analysis Presentation",
-    description:
-      "A presentation was conducted explaining why privacy policy analysis is important and how organizations must evaluate compliance with privacy regulations.",
-    type: "presentation",
-  },
-  {
-    id: 2,
-    date: "April 2026",
-    title: "Hands-on Lab Session",
-    description:
-      "Students participated in interactive hands-on labs using Google Colab to follow along step by step.",
-    type: "lab",
-  },
-]
+    {
+      id: 1,
+      date: "April 2026",
+      title: "Privacy Policy Analysis Presentation",
+      description:
+        "A presentation was conducted explaining why privacy policy analysis is important and how organizations must evaluate compliance with privacy regulations.",
+      type: "presentation",
+    },
+    {
+      id: 2,
+      date: "April 2026",
+      title: "Hands-on Lab Session",
+      description:
+        "Students participated in interactive hands-on labs using Google Colab to follow along step by step.",
+      type: "lab",
+    },
+  ]
+
   const highlights = [
-  {
-    title: "Privacy Policy Analysis",
-    description:
-      "Presentation on why privacy policy analysis is needed and why organizations must evaluate privacy compliance regularly.",
-    icon: BookOpen,
-    href: "/curriculum",
-  },
-  {
-    title: "Hands-on Labs",
-    description:
-      "Students completed guided hands-on lab exercises using Google Colab during the session.",
-    icon: Zap,
-    href: "/labs",
-  },
-]
+    {
+      title: "Privacy Policy Analysis",
+      description:
+        "Presentation on why privacy policy analysis is needed and why organizations must evaluate privacy compliance regularly.",
+      icon: BookOpen,
+      href: "/project-overview",
+    },
+    {
+      title: "Hands-on Labs",
+      description:
+        "Students completed guided hands-on lab exercises using Google Colab during the session.",
+      icon: Zap,
+      href: "/labs",
+    },
+  ]
+
+  const resources = [
+    {
+      title: "Presentation Slides",
+      description: "Privacy Policy Analysis presentation PDF.",
+      href: "/slides/Privacy-Policy-Analysis-Using-NLP-Techniques.pdf",
+      type: "PDF",
+    },
+    {
+      title: "Lab 1",
+      description: "Privacy Policy Analysis using NLP.",
+      href: "/labs/LAB_1_Privacy_Policy_Analysis_Using_NLP.pdf",
+      type: "PDF",
+    },
+    {
+      title: "Lab 2",
+      description: "Learning-based privacy policy analysis.",
+      href: "/labs/Lab_2_Learning_Based_Privacy_Policy_Analysis.pdf",
+      type: "PDF",
+    },
+    {
+      title: "Lab 3",
+      description: "Multi-class classification exercise.",
+      href: "/labs/Lab_3_Multi_Class_Classification.pdf",
+      type: "PDF",
+    },
+  ]
 
   return (
     <div className="min-h-screen">
@@ -49,28 +77,36 @@ export default function HomePage() {
               Privacy Compliance Education and Research
             </h1>
             <p className="text-lg text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  The PRICOMP project included a presentation on privacy policy analysis and guided hands-on lab activities for students.
-                
+              The PRICOMP project included a presentation on privacy policy
+              analysis and guided hands-on lab activities for students.
             </p>
+
             <div className="text-sm text-blue-100 mb-8">
               <div className="font-semibold mb-3">Partner Institutions:</div>
               <div className="flex flex-wrap gap-3 justify-center">
-                <span className="px-3 py-1 bg-white/10 rounded">Clemson University</span>
+                <span className="px-3 py-1 bg-white/10 rounded">
+                  Clemson University
+                </span>
                 <span className="px-3 py-1 bg-white/10 rounded">PVAMU</span>
                 <span className="px-3 py-1 bg-white/10 rounded">NC A&T</span>
               </div>
             </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-orange-500 text-white hover:bg-orange-600 font-semibold text-lg px-8 py-6">
+              <Button
+                asChild
+                className="bg-orange-500 text-white hover:bg-orange-600 font-semibold text-lg px-8 py-6"
+              >
                 <Link href="/project-overview" className="flex items-center gap-2">
                   Learn about the Project <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
+
               <Button
                 asChild
                 className="bg-white/20 border border-white/30 text-white hover:bg-white/30 font-semibold text-lg px-8 py-6"
               >
-                <Link href="/labs">View Hands-on Labs</Link>
+                <Link href="#resources">View Resources</Link>
               </Button>
             </div>
           </div>
@@ -87,7 +123,10 @@ export default function HomePage() {
       {/* Key Highlights Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Project Components</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Key Project Components
+          </h2>
+
           <div className="grid md:grid-cols-2 gap-6">
             {highlights.map((highlight, index) => {
               const Icon = highlight.icon
@@ -103,7 +142,9 @@ export default function HomePage() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 leading-relaxed">{highlight.description}</p>
+                      <p className="text-gray-600 leading-relaxed">
+                        {highlight.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </Link>
@@ -116,22 +157,35 @@ export default function HomePage() {
       {/* Project News Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Project News and Updates</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">
+            Project News and Updates
+          </h2>
+
           <div className="bg-white rounded-lg p-6 shadow-sm">
             <div className="space-y-4 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {projectNews.map((item) => (
-                <div key={item.id} className="pb-4 border-b border-gray-200 last:border-b-0 last:pb-0">
+                <div
+                  key={item.id}
+                  className="pb-4 border-b border-gray-200 last:border-b-0 last:pb-0"
+                >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 mt-1">
                       <Bell className="w-5 h-5 text-orange-500" />
                     </div>
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-2">
                         <Calendar className="w-4 h-4 text-gray-500" />
-                        <span className="text-sm font-medium text-gray-600">{item.date}</span>
+                        <span className="text-sm font-medium text-gray-600">
+                          {item.date}
+                        </span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
+                      <h3 className="font-semibold text-gray-900 mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -140,6 +194,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      
     </div>
   )
 }
