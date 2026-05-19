@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
+const repo = "/Privacy-Compliance-Education-1";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? "/Privacy-Compliance-Education-1" : "",
+  trailingSlash: true,
+  basePath: process.env.NODE_ENV === "production" ? repo : "",
   images: {
     unoptimized: true,
   },
